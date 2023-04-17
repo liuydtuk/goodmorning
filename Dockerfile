@@ -10,5 +10,5 @@ RUN touch /var/log/cron.log
 COPY ./utils/ ./utils/
 COPY morning.py morning.py
 EXPOSE 5000
-CMD systemctl start cron && tail -f /var/log/cron.log
+CMD systemctl start cron && flask --app hello run
 
