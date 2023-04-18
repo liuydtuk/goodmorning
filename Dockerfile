@@ -11,5 +11,4 @@ COPY ./utils/ ./utils/
 COPY morning.py morning.py
 COPY hello.py hello.py
 EXPOSE 5000
-CMD systemctl start cron && flask --app hello run
-
+CMD flask --app hello run && systemctl start cron
